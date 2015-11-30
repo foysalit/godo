@@ -28,10 +28,22 @@ var routes = Routes {
         HandlerFunc: TodoList,
     },
     Route {
+        Name: "todos.create",
+        Method: "POST",
+        Pattern: "/todos", 
+        HandlerFunc: TodoCreate,
+    },
+    Route {
         Name: "todos.single",
         Method: "GET",
         Pattern: "/todos/{todoId}", 
         HandlerFunc: TodoShow,
+    },
+    Route {
+        Name: "todos.remove",
+        Method: "DELETE",
+        Pattern: "/todos/{todoId}", 
+        HandlerFunc: TodoRemove,
     },
 }
 
