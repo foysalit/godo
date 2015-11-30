@@ -1,1 +1,1 @@
-web: ./godo
+web: godo
