@@ -2,6 +2,7 @@ package main
 
 import (
     "log"
+    "os"
     "net/http"
 )
 
@@ -10,5 +11,5 @@ import (
 func main() {
 	router := InitRouters()
 
-    log.Fatal(http.ListenAndServe(":8080", router))
+    log.Fatal(http.ListenAndServe(":"+os.Getenv("PORT"), router))
 }
